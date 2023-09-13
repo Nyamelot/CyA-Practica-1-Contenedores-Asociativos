@@ -1,0 +1,2 @@
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
