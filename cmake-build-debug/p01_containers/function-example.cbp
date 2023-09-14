@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="function-example"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\p01_containers\;CMake Files\p01_containers\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="function-example">
+				<Option output="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/bin/function-example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src"/>
+					<Add directory="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src/../include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 function-example"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="function-example/fast">
+				<Option output="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/bin/function-example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src"/>
+					<Add directory="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src/../include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 function-example/fast"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src/container.cc">
+			<Option target="function-example"/>
+		</Unit>
+		<Unit filename="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src/main.cc">
+			<Option target="function-example"/>
+		</Unit>
+		<Unit filename="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src/usage.cc">
+			<Option target="function-example"/>
+		</Unit>
+		<Unit filename="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\p01_containers\"/>
+		</Unit>
+		<Unit filename="/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\p01_containers\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

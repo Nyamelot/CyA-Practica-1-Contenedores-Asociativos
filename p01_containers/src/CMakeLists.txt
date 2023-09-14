@@ -1,6 +1,6 @@
-project("function-example")
+project("p01-containers")
 
-set(EXECUTABLE_NAME "function-example")
+set(EXECUTABLE_NAME "p01-containers")
 
 file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cc")
 list(REMOVE_ITEM SOURCES "main.cc")

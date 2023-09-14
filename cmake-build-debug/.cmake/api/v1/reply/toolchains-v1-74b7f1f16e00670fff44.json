@@ -5,43 +5,10 @@
 		{
 			"compiler" : 
 			{
-				"id" : "GNU",
-				"implicit" : 
-				{
-					"includeDirectories" : 
-					[
-						"/usr/lib/gcc/x86_64-linux-gnu/11/include",
-						"/usr/local/include",
-						"/usr/include/x86_64-linux-gnu",
-						"/usr/include"
-					],
-					"linkDirectories" : 
-					[
-						"/usr/lib/gcc/x86_64-linux-gnu/11",
-						"/usr/lib/x86_64-linux-gnu",
-						"/usr/lib",
-						"/lib/x86_64-linux-gnu",
-						"/lib"
-					],
-					"linkFrameworkDirectories" : [],
-					"linkLibraries" : 
-					[
-						"gcc",
-						"gcc_s",
-						"c",
-						"gcc",
-						"gcc_s"
-					]
-				},
-				"path" : "/usr/bin/cc",
-				"version" : "11.2.0"
+				"implicit" : {},
+				"path" : "/usr/bin/cc"
 			},
-			"language" : "C",
-			"sourceFileExtensions" : 
-			[
-				"c",
-				"m"
-			]
+			"language" : "C"
 		},
 		{
 			"compiler" : 
@@ -91,6 +58,7 @@
 				"cc",
 				"cpp",
 				"cxx",
+				"m",
 				"mm",
 				"mpp",
 				"CPP",

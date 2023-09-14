@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers//CMakeFiles/progress.marks
+	cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 p01_containers/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 p01_containers/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,31 +103,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 p01_containers/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 p01_containers/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named function-example
-
-# Build rule for target.
-function-example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 function-example
-.PHONY : function-example
-
-# fast build rule for target.
-function-example/fast:
-	$(MAKE) $(MAKESILENT) -f p01_containers/src/CMakeFiles/function-example.dir/build.make p01_containers/src/CMakeFiles/function-example.dir/build
-.PHONY : function-example/fast
 
 # Help Target
 help:
@@ -137,7 +124,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... function-example"
 .PHONY : help
 
 
@@ -149,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

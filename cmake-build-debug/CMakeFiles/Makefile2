@@ -63,16 +63,72 @@ CMAKE_BINARY_DIR = /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: p01_containers/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: p01_containers/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: p01_containers/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory p01_containers
+
+# Recursive "all" directory target.
+p01_containers/all: p01_containers/src/all
+.PHONY : p01_containers/all
+
+# Recursive "preinstall" directory target.
+p01_containers/preinstall: p01_containers/src/preinstall
+.PHONY : p01_containers/preinstall
+
+# Recursive "clean" directory target.
+p01_containers/clean: p01_containers/src/clean
+.PHONY : p01_containers/clean
+
+#=============================================================================
+# Directory level rules for directory p01_containers/src
+
+# Recursive "all" directory target.
+p01_containers/src/all: p01_containers/src/CMakeFiles/function-example.dir/all
+.PHONY : p01_containers/src/all
+
+# Recursive "preinstall" directory target.
+p01_containers/src/preinstall:
+.PHONY : p01_containers/src/preinstall
+
+# Recursive "clean" directory target.
+p01_containers/src/clean: p01_containers/src/CMakeFiles/function-example.dir/clean
+.PHONY : p01_containers/src/clean
+
+#=============================================================================
+# Target rules for target p01_containers/src/CMakeFiles/function-example.dir
+
+# All Build rule for target.
+p01_containers/src/CMakeFiles/function-example.dir/all:
+	$(MAKE) $(MAKESILENT) -f p01_containers/src/CMakeFiles/function-example.dir/build.make p01_containers/src/CMakeFiles/function-example.dir/depend
+	$(MAKE) $(MAKESILENT) -f p01_containers/src/CMakeFiles/function-example.dir/build.make p01_containers/src/CMakeFiles/function-example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target function-example"
+.PHONY : p01_containers/src/CMakeFiles/function-example.dir/all
+
+# Build rule for subdir invocation for target.
+p01_containers/src/CMakeFiles/function-example.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 p01_containers/src/CMakeFiles/function-example.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/CMakeFiles 0
+.PHONY : p01_containers/src/CMakeFiles/function-example.dir/rule
+
+# Convenience name for target.
+function-example: p01_containers/src/CMakeFiles/function-example.dir/rule
+.PHONY : function-example
+
+# clean rule for target.
+p01_containers/src/CMakeFiles/function-example.dir/clean:
+	$(MAKE) $(MAKESILENT) -f p01_containers/src/CMakeFiles/function-example.dir/build.make p01_containers/src/CMakeFiles/function-example.dir/clean
+.PHONY : p01_containers/src/CMakeFiles/function-example.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

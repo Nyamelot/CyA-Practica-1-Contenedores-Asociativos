@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
-project("function-example"
+project("p01-containers"
         VERSION 1.0.0
         DESCRIPTION ""
         LANGUAGES CXX)

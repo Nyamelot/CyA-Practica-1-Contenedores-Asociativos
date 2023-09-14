@@ -156,7 +156,22 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=Practica 1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=1.0.0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -220,6 +235,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+Practica 1_BINARY_DIR:STATIC=/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug
+
+//Value Computed by CMake
+Practica 1_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Practica 1_SOURCE_DIR:STATIC=/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos
+
 //Path to a program.
 ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 
@@ -234,6 +258,15 @@ Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos
+
+//Value Computed by CMake
+function-example_BINARY_DIR:STATIC=/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug/p01_containers/src
+
+//Value Computed by CMake
+function-example_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+function-example_SOURCE_DIR:STATIC=/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/p01_containers/src
 
 
 ########################
@@ -348,7 +381,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
