@@ -1,0 +1,7 @@
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/build/CMakeFiles/edit_cache.dir
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/build/CMakeFiles/rebuild_cache.dir
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/build/p01_containers/CMakeFiles/edit_cache.dir
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/build/p01_containers/CMakeFiles/rebuild_cache.dir
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/build/p01_containers/src/CMakeFiles/p01-containers.dir
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/build/p01_containers/src/CMakeFiles/edit_cache.dir
+/home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/build/p01_containers/src/CMakeFiles/rebuild_cache.dir

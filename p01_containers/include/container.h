@@ -10,6 +10,7 @@
 
 #include <map>
 #include <string>
+#include <vector>
 
-void CalificacionUnica(std::map<std::string, double> contenedor);
-void CalificacionMultiple(std::map<std::string, double> contenedor);
+std::map<std::string, double> CalificacionUnica(const std::string& file_path);
+std::map<std::string, std::vector<double>> CalificacionMultiple(const std::string& file_path);

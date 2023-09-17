@@ -11,18 +11,77 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <fstream>
+#include <vector>
+#include <sstream>
 
-void CalificacionUnica(std::map<std::string, double> contenedor) {
-  std::map<std::string, double> calificacion_unica;
-  for (const auto& element : contenedor) {
-    std::map<std::string, double>::iterator it;
-    it = contenedor.find(element.first);
-    if (!(it == contenedor.end())) {
-      if (element.second > it -> second) {
-        calificacion_unica.emplace(element);
-      } else {
-        calificacion_unica.emplace(it);
-      }
+std::vector<std::string> Split(const std::string& input_string, const char querry_char) {
+  std::vector<std::string> characters;
+  std::stringstream character;
+  for (char symbol : input_string) {
+    if (symbol != querry_char) {
+      character << symbol;
+      continue;
+    }
+    characters.emplace_back(character.str());
+    character.str(std::string());
+  }
+  characters.emplace_back(character.str());
+  return characters;
+}
+
+
+std::vector<std::string> FileReader(std::ifstream& input_files) {
+  std::vector<std::string> text_file;
+  std::string text_line;
+  while (!input_files.eof()) {
+    std::getline(input_files, text_line);
+    text_file.emplace_back(text_line);
+  }
+  return text_file;
+}
+
+//alu0122334455 5.25
+//alu0101010101 4.75
+//alu0198765432 8.5
+//alu0101010101 9.25
+//alu0155555555 7
+
+std::map<std::string, double> CalificacionUnica(const std::string& file_path) {
+  std::ifstream input_file(file_path);
+  const auto lines = FileReader(input_file);
+  std::map<std::string, double> result;
+  for (const auto& line : lines) {
+    const auto line_split = Split(line, ' ');
+    if (line_split.size() < 2 || line_split.size() > 2) {
+      throw std::runtime_error("Invalid input format");
+    }
+    std::string alu = line_split[0];
+    double marks = std::stod(line_split[1]);
+    if (!result.count(alu)) {
+      result.emplace(alu, marks);
+    } else if (marks > result.at(alu)) {
+      result.at(alu) = marks;
     }
   }
+  return result;
+}
+
+std::map<std::string, std::vector<double>> CalificacionMultiple(const std::string& file_path) {
+  std::ifstream input_file(file_path);
+  const auto lines = FileReader(input_file);
+  std::map<std::string, std::vector<double>> result;
+  for (const auto& line : lines) {
+    const auto line_split = Split(line, ' ');
+    if (line_split.size() < 2 || line_split.size() > 2) {
+      throw std::runtime_error("Invalid input format");
+    }
+    std::string alu = line_split[0];
+    double marks = std::stod(line_split[1]);
+    if (!result.count(alu)) {
+      result.emplace(alu, std::vector<double>());
+    }
+    result.at(alu).emplace_back(marks);
+  }
+  return result;
 }
