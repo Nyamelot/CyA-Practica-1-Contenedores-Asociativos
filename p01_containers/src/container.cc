@@ -41,13 +41,8 @@ std::vector<std::string> FileReader(std::ifstream& input_files) {
   return text_file;
 }
 
-//alu0122334455 5.25
-//alu0101010101 4.75
-//alu0198765432 8.5
-//alu0101010101 9.25
-//alu0155555555 7
 
-std::map<std::string, double> CalificacionUnica(const std::string& file_path) {
+std::map<std::string, double> SingleGrade(const std::string& file_path) {
   std::ifstream input_file(file_path);
   const auto lines = FileReader(input_file);
   std::map<std::string, double> result;
@@ -67,7 +62,7 @@ std::map<std::string, double> CalificacionUnica(const std::string& file_path) {
   return result;
 }
 
-std::map<std::string, std::vector<double>> CalificacionMultiple(const std::string& file_path) {
+std::map<std::string, std::vector<double>> MultipleGrade(const std::string& file_path) {
   std::ifstream input_file(file_path);
   const auto lines = FileReader(input_file);
   std::map<std::string, std::vector<double>> result;

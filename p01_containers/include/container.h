@@ -12,5 +12,5 @@
 #include <string>
 #include <vector>
 
-std::map<std::string, double> CalificacionUnica(const std::string& file_path);
-std::map<std::string, std::vector<double>> CalificacionMultiple(const std::string& file_path);
+std::map<std::string, double> SingleGrade(const std::string& file_path);
+std::map<std::string, std::vector<double>> MultipleGrade(const std::string& file_path);
