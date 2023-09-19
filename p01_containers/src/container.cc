@@ -8,6 +8,14 @@
 // Correo: alu0101568232@ull.edu.es
 // Fecha: 14/09/2023
 
+/**
+ * @file containers.cpp
+ * @brief Implementation file for the main functionality of the program.
+ *
+ * This file contains the implementation of functions for reading and processing input files
+ * to create associative containers with student grades.
+ */
+
 #include <iostream>
 #include <map>
 #include <string>
@@ -15,6 +23,13 @@
 #include <vector>
 #include <sstream>
 
+/**
+ * @brief Splits a string into substrings based on a query character.
+ *
+ * @param input_string The input string to be split.
+ * @param query_char The character used for splitting the string.
+ * @return A vector of substrings obtained by splitting the input string.
+ */
 std::vector<std::string> Split(const std::string& input_string, const char querry_char) {
   std::vector<std::string> characters;
   std::stringstream character;
@@ -30,7 +45,12 @@ std::vector<std::string> Split(const std::string& input_string, const char querr
   return characters;
 }
 
-
+/**
+ * @brief Reads lines from an input file and stores them in a vector.
+ *
+ * @param input_files The input file stream to be read.
+ * @return A vector of strings, each representing a line from the input file.
+ */
 std::vector<std::string> FileReader(std::ifstream& input_files) {
   std::vector<std::string> text_file;
   std::string text_line;
@@ -41,7 +61,13 @@ std::vector<std::string> FileReader(std::ifstream& input_files) {
   return text_file;
 }
 
-
+/**
+ * @brief Processes an input file and creates a map of student IDs to their highest grades.
+ *
+ * @param file_path The path to the input file.
+ * @return A map where keys are student IDs and values are their highest grades.
+ * @throws std::runtime_error if the input format is invalid.
+ */
 std::map<std::string, double> SingleGrade(const std::string& file_path) {
   std::ifstream input_file(file_path);
   const auto lines = FileReader(input_file);
@@ -62,6 +88,13 @@ std::map<std::string, double> SingleGrade(const std::string& file_path) {
   return result;
 }
 
+/**
+ * @brief Processes an input file and creates a map of student IDs to their grade vectors.
+ *
+ * @param file_path The path to the input file.
+ * @return A map where keys are student IDs and values are vectors of their grades.
+ * @throws std::runtime_error if the input format is invalid.
+ */
 std::map<std::string, std::vector<double>> MultipleGrade(const std::string& file_path) {
   std::ifstream input_file(file_path);
   const auto lines = FileReader(input_file);

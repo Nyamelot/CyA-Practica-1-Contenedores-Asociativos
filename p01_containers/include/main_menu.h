@@ -1,49 +1,79 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingenier´ıa y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 1: Contenedores asociativos
+// Autor: José Ángel Portillo García
+// Correo: alu0101568232@ull.edu.es
+// Fecha: 14/09/2023
+
+/**
+ * @file main_menu.h
+ * @brief Header file for the MainMenu class.
+ *
+ * This file contains the declaration of the MainMenu class, which provides a menu-driven
+ * interface for selecting actions related to ordered files and containers.
+ */
+
 
 #ifndef MAIN_MENU_H
 #define MAIN_MENU_H
+
+#include "container.h"
 
 #include <map>
 #include <iostream>
 #include <vector>
 
-#include "container.h"
+class ElementsMenu;
 
+/**
+ * @class MainMenu
+ * @brief A class for managing menu-driven actions related to ordered files and containers.
+ *
+ * The MainMenu class allows the user to choose between different actions related to ordered files
+ * and containers, such as ordering files based on key values or displaying values for the same key
+ * in a consecutive order.
+ */
+ 
 class MainMenu {
  public:
-  void Start {
+  void Case1(const std::string& file_path);
+  void Case2(const std::string& file_path);
+  void AddSingle();
+  void AddMultiple();
+  void Run();
+
+  void Start (const std::string& file_path) {
+    int number = 3;
     do {
-    std::cout << "Introduce a number to select which action you want to carry out" << std::endl;
-    std::cout << R"(
+      std::cout << "Introduce a number to select which action you want to carry out" << std::endl;
+      std::cout << R"(
                   ·1 Order the selected file with the highest value of each key
                   ·2 Order the selected file showing all the values of a same key in a consequent order
                   ·0 End the program)";
-    std::cout << std::endl;
-    std::cin >> number;
-    std::cout << std::endl;
-    switch(number) {
-      default:
-        std::cout << "Incorrect number" << std::endl << std::endl;
-        break;
+      std::cout << std::endl;
+      std::cin >> number;
+      std::cout << std::endl;
+      switch(number) {
+        default:
+          std::cout << "Incorrect number" << std::endl << std::endl;
+          break;
     
-      case 1:
-        single_grades = SingleGrade(argv[1]);
-          for (const auto& element : single_grades) {
-            std::cout << element.first << " " << element.second << std::endl;
-          }
+        case 1:
+          Case1(file_path);
+          is_single_ = true;
+          Run();
           std::cout << std::endl;
-        break;
+          break;
       
-      case 2:
-        multiple_grades = MultipleGrade(argv[1]);
-          for (const auto& elements : multiple_grades) {
-            std::cout << elements.first;
-            for (const auto& grades : elements.second){
-              std::cout << " " << grades;
-            }
+        case 2:
+          Case2(file_path);
+          is_single_ = false;
+          Run();
           std::cout << std::endl;
-        }
-        std::cout << std::endl;
-        break;
+          break;
 
       case 0:
         break;  
@@ -52,9 +82,10 @@ class MainMenu {
     } while(number != 0);
   }
 
-
-
- private:
+  private:
+  std::map<std::string, double> single_grade_;
+  std::map<std::string, std::vector<double>> multiple_grades_;
+  bool is_single_;
 };
 
 #endif
