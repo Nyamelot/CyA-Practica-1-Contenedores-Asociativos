@@ -43,9 +43,9 @@ class MainMenu {
   void Case2(const std::string& file_path);
   void AddSingle();
   void AddMultiple();
-  void Run();
+  void MenuElements();
 
-  void Start (const std::string& file_path) {
+  inline void Start (const std::string& file_path) {
     int number = 3;
     do {
       std::cout << "Introduce a number to select which action you want to carry out" << std::endl;
@@ -64,14 +64,14 @@ class MainMenu {
         case 1:
           Case1(file_path);
           is_single_ = true;
-          Run();
+          MenuElements();
           std::cout << std::endl;
           break;
       
         case 2:
           Case2(file_path);
           is_single_ = false;
-          Run();
+          MenuElements();
           std::cout << std::endl;
           break;
 
@@ -82,7 +82,7 @@ class MainMenu {
     } while(number != 0);
   }
 
-  private:
+ private:
   std::map<std::string, double> single_grade_;
   std::map<std::string, std::vector<double>> multiple_grades_;
   bool is_single_;

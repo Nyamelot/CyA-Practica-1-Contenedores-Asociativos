@@ -28,13 +28,14 @@ void MainMenu::Case2(const std::string& file_path) {
   }
 }
 
-void MainMenu::Run() {
+void MainMenu::MenuElements() {
     int number = 0;
     do {
       std::cout << "Do you want to add elements to the container?" << std::endl;
       std::cout << R"( 
               ·Press 1 to add elements
-              ·Press 2 to exit the current action)";
+              ·Press 2 print the container
+              ·Press 3 to exit the current action)";
       std::cout << std::endl; 
       std::cin >> number;
 
@@ -49,9 +50,26 @@ void MainMenu::Run() {
             break;
           }
         case 2:
-          return;
+          if (is_single_) {
+            for (const auto& elements : single_grade_) {
+              std::cout << elements.first << ' ' << elements.second << std::endl;
+            }
+            break;
+          } else {
+            for (const auto& elements : multiple_grades_) {
+              std::cout << elements.first;
+              for (const auto& grade : elements.second) {
+                std::cout << ' ' << grade;
+              }
+              std::cout << std::endl;
+            }
+            break;
+          }
+
+        case 3:
+          return;  
       }
-    } while (number != 2);
+    } while (number != 3);
   }
 
 
@@ -64,7 +82,12 @@ void MainMenu::AddSingle() {
   std::cin >> alu;
   std::cout << "Introduce the grade: " << std::endl;
   std::cin >> grade;
-  single_grade_.emplace(alu, grade);
+  if (!single_grade_.count(alu)) {
+    single_grade_.emplace(alu, grade);
+  } else if (grade > single_grade_.at(alu)) {
+    single_grade_.at(alu) = grade;
+  }
+  
 }
 
 void MainMenu::AddMultiple() {
@@ -77,5 +100,11 @@ void MainMenu::AddMultiple() {
   while (std::cin >> grade) {
     grades.emplace_back(grade);
   }
-  multiple_grades_.emplace(alu, grades);
+  if (!multiple_grades_.count(alu)) {
+    multiple_grades_.emplace(alu, grades);
+  } else {
+    for (const auto& grade : grades) {
+      multiple_grades_.at(alu).emplace_back(grade);
+    }
+  }
 }
