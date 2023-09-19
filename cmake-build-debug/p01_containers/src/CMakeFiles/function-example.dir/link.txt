@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/function-example.dir/main.cc.o CMakeFiles/function-example.dir/container.cc.o CMakeFiles/function-example.dir/usage.cc.o -o ../../bin/function-example 

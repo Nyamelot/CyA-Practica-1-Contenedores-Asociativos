@@ -1,5 +1,0 @@
-C:\WINDOWS\system32\wsl.exe --distribution Ubuntu-22.04 --exec /usr/bin/fish -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos -B /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug"
--- Found sources: container.cc;usage.cc
--- Configuring done
--- Generating done
--- Build files have been written to: /home/nyan/practicas-CyA/Practica-1-Contenedores-Asociativos/cmake-build-debug
