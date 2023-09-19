@@ -76,7 +76,6 @@ void MainMenu::MenuElements() {
 
 void MainMenu::AddSingle() {
   std::string alu;
-  
   double grade;
   std::cout << "Introduce the key: " << std::endl;
   std::cin >> alu;
@@ -91,15 +90,18 @@ void MainMenu::AddSingle() {
 }
 
 void MainMenu::AddMultiple() {
+  char end_input;
   std::string alu;
   double grade;
   std::vector<double> grades;
   std::cout << "Introduce the key: " << std::endl;
   std::cin >> alu;
-  std::cout << "Introduce a series of grades(with spaces, dont press enter): " << std::endl;
+  std::cout << "Introduce a series of grades(press q to end inpu): " << std::endl;
   while (std::cin >> grade) {
     grades.emplace_back(grade);
   }
+  std::cin.clear();
+  std::cin >> end_input;
   if (!multiple_grades_.count(alu)) {
     multiple_grades_.emplace(alu, grades);
   } else {
@@ -108,3 +110,5 @@ void MainMenu::AddMultiple() {
     }
   }
 }
+
+
