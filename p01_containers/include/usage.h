@@ -1,5 +1,5 @@
 // Universidad de La Laguna
-// Escuela Superior de Ingenier´ıa y Tecnología
+// Escuela Superior de Ingenieríıa y Tecnología
 // Grado en Ingeniería Informática
 // Asignatura: Computabilidad y Algoritmia
 // Curso: 2º

@@ -1,5 +1,5 @@
 // Universidad de La Laguna
-// Escuela Superior de Ingenier´ıa y Tecnología
+// Escuela Superior de Ingenieríıa y Tecnología
 // Grado en Ingeniería Informática
 // Asignatura: Computabilidad y Algoritmia
 // Curso: 2º
@@ -8,7 +8,9 @@
 // Correo: alu0101568232@ull.edu.es
 // Fecha: 14/09/2023
 
+
 #include "main_menu.h"
+
 
 void MainMenu::Case1(const std::string& file_path) {
   single_grade_ = SingleGrade(file_path);
@@ -96,7 +98,7 @@ void MainMenu::AddMultiple() {
   std::vector<double> grades;
   std::cout << "Introduce the key: " << std::endl;
   std::cin >> alu;
-  std::cout << "Introduce a series of grades(press q to end inpu): " << std::endl;
+  std::cout << "Introduce a series of grades(press q to end input): " << std::endl;
   while (std::cin >> grade) {
     grades.emplace_back(grade);
   }
