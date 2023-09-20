@@ -44,6 +44,7 @@ class MainMenu {
   void AddSingle();
   void AddMultiple();
   void MenuElements();
+  void SearchGrade();
 
   inline void Start (const std::string& file_path) {
     int number = 3;

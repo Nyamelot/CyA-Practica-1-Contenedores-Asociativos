@@ -32,12 +32,13 @@ void MainMenu::Case2(const std::string& file_path) {
 
 void MainMenu::MenuElements() {
     int number = 0;
-    do {
-      std::cout << "Do you want to add elements to the container?" << std::endl;
-      std::cout << R"( 
+    do {menu
               ·Press 1 to add elements
               ·Press 2 print the container
               ·Press 3 to exit the current action)";
+      if (!is_single_) {
+        std::cout << std::endl << "·Press 4 to search a grade";
+      }
       std::cout << std::endl; 
       std::cin >> number;
 
@@ -67,6 +68,13 @@ void MainMenu::MenuElements() {
             }
             break;
           }
+        
+        case 4:
+          if (!is_single_) {
+            SearchGrade();
+            break;
+          } 
+          break;
 
         case 3:
           return;  
@@ -113,4 +121,18 @@ void MainMenu::AddMultiple() {
   }
 }
 
-
+void MainMenu::SearchGrade() {
+  double nota;
+  std::cout << "Introduce una nota para buscar: ";
+  std::cin >> nota;
+  std::cout << std::endl;
+  for (const auto& elements : multiple_grades_) {
+    bool check = true;
+    for (const auto& grades : elements.second){
+      if (grades == nota && check) {
+        check = false;
+        std::cout << elements.first << std::endl << std::endl;
+      }
+    }
+  }
+}

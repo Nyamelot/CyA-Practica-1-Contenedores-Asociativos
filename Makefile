@@ -1,4 +1,4 @@
-NAME=IB-Practica08-functions
+NAME=p01-
 DIRPATH=$(shell realpath .)
 DIRNAME=$(shell basename $(DIRPATH))
 
@@ -12,4 +12,4 @@ clean:
 	rm -rf build
 
 tar:
-	cd ..; tar cvfz $(DIRNAME)/PortilloGarciaJoseAngel-$(NAME).tar.gz --exclude-from=./$(DIRNAME)/.gitignore $(DIRNAME)
+	cd ..; tar cvfz $(DIRNAME)/p01-PortilloGarcia-JoseAngel.tar.gz --exclude-from=./$(DIRNAME)/.gitignore $(DIRNAME)
